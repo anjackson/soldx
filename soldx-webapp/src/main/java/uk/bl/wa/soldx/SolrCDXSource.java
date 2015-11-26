@@ -22,6 +22,12 @@ import org.archive.util.iterator.CloseableIterator;
  */
 public class SolrCDXSource implements CDXInputSource {
 
+    private String solrEndpoint;
+
+    public SolrCDXSource(String solrEndpoint) {
+        this.solrEndpoint = solrEndpoint;
+    }
+
     public CloseableIterator<String> getCDXIterator(String key, String prefix,
             boolean exact, ZipNumParams params) throws IOException {
         // TODO Auto-generated method stub
